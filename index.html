@@ -7,34 +7,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <title>SheCodes</title>
 </head>
 <body>
     <div class="app-main">
     <header>
-        <input type="search" placeholder="Enter a city..." required class="form-search"/>
-        <input type="submit" placeholder="Search" class="form-submit"/>
+        <form id="form">
+            <input type="search" placeholder="Enter a city..." required class="form-search" id="form-search"/>
+            <input type="submit" placeholder="Search" class="form-submit" id="form-submit"/>
+        </form>
     </header>
     <hr>
     <main>
         <div class="weather-app-container">
             <div class="weather-app-info">
-                <h1 class="weather-app-city">
+                <h1 class="weather-app-city" id="weather-app-city">
                     Paris
                 </h1> 
                 <p class="weather-app-details">
-                    Thursday 14:03, clear sky
+                    <span id="current-date">Saturday 05:36 PM</span>, 
+                    <span id="weather-description">clear sky</span>
                 </br>
                 Humidity: 
-                <strong class="humidity">93%</strong>, Wind: 
-                <strong class="wind">2.57km/h</strong>   
+                <strong class="humidity" id="humidity">93</strong><strong class="percentage">%</strong>, Wind: 
+                <strong class="wind" id="wind">2.57</strong><strong class="km-units">km/h</strong>   
                 </p>
             </div>
             <div class="weather-app-temperature">
-                <div class="temperature-icon">
-                    🌤️
-                </div> 
-                <div class="temperature-number">
+                <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" class="temperature-icon" id="temperature-icon">
+                <div class="temperature-number" id="temperature-number">
                     20
                 </div>
                 <div class="temperature-celcius">
@@ -55,5 +57,6 @@
         </a>
     </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -67,9 +67,8 @@ main {
 }
 
 .temperature-icon {
-    font-size: 30px;
-    margin-top: 10px;
-    margin-right: 10px;
+    width: 88px;
+    height: 88px;
 }
 
 .temperature-celcius {
@@ -90,6 +89,14 @@ main {
 
 .wind {
     color: #f65282
+}
+
+.percentage {
+   color: #f65282 
+}
+
+.km-units {
+    color: #f65282  
 }
 
 footer {
